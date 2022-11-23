@@ -1,0 +1,22 @@
+name: Example
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  call:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node
+        with:
+          node-version: 18.x
+
+      - name: Set up Gattuso
+        uses: akromio/setup-gattuso@v1
+      
+      - name: Check installation
+        run: gattuso -v

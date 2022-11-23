@@ -1,0 +1,14 @@
+name: setup-gattuso
+description: This action sets up Gattuso.
+author: Sia Codelabs
+
+branding:
+  icon: download
+  color: gray-dark
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Gattuso
+      shell: bash
+      run: npm i -g @akromio/gattuso
